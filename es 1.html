@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>
+        es 1
+    </title>
+</head>
+<body>
+     <button onclick="(function(){
+        console.log('click')})()">cliccami da evento</button>
+         <button onclick="funzioneClick('script')">;
+            cliccami da script
+            </button>
+            <button id="btn3">cliccami da listerner</button>;
+            <script>
+                //la parentesi che contiene la funzione la fa eseguire si chiama self declaration and execution
+
+               // var funzioneClick= function(){
+                 //   console.log("click da script");
+                //};
+                //funzioneClick();
+               var funzioneClick=function(stringa){
+                  console.log("click da "+ stringa);
+                };
+                <div id="div1">
+                <p>non premere per cortesia</p>
+                </div>
+                var botton3=document.getElementById("btn3");
+                botton3.addEventListener("click",
+                function(){
+                    funzioneClick("listerner")
+                    document.getElementById("div1").setAttribute("style","color:pink")
+                    document.getElementById("div1").innerHTML=<h1>non cliccare mona</h1>
+                    var value=false;
+                    if(value=false){
+                    botton3.setAttribute("style","background-color:red");
+                    value=true;
+                    }else{
+                        botton3.removeAttribute("style");
+                    }
+                }
+                );
+            </script>
+</body>
+</html>
